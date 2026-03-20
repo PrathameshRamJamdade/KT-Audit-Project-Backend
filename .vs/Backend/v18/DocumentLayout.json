@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\PrathameshJamdade\\Desktop\\Audit_Management_Project\\Backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F1FCDFEE-CCD7-8D93-489F-7D2F811CAB8A}|AuditManagement.API\\AuditManagement.API.csproj|c:\\users\\prathameshjamdade\\desktop\\audit_management_project\\backend\\auditmanagement.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1FCDFEE-CCD7-8D93-489F-7D2F811CAB8A}|AuditManagement.API\\AuditManagement.API.csproj|solutionrelative:auditmanagement.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\PrathameshJamdade\\Desktop\\Audit_Management_Project\\Backend\\AuditManagement.API\\Program.cs",
+              "RelativeDocumentMoniker": "AuditManagement.API\\Program.cs",
+              "ToolTip": "C:\\Users\\PrathameshJamdade\\Desktop\\Audit_Management_Project\\Backend\\AuditManagement.API\\Program.cs",
+              "RelativeToolTip": "AuditManagement.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T05:19:35.328Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
