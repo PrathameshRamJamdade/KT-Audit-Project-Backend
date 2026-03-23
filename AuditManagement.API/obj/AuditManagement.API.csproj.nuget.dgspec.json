@@ -70,6 +70,10 @@
               "target": "Package",
               "version": "[10.0.5, )"
             },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2024.3.4, )"
+            },
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[10.0.0, )"

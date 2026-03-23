@@ -42,8 +42,26 @@ public class AuditController : ControllerBase
     public async Task<IActionResult> GetAuditsForAuditor()
     {
         var userId = int.Parse(User.FindFirst("UserId").Value);
-
         var result = await _auditService.GetAuditsForAuditor(userId);
         return Ok(result);
+    }
+
+    // Auditor submits audit for approval
+    [HttpPut("{id}/submit")]
+    [Authorize(Roles = "Auditor")]
+    public async Task<IActionResult> SubmitAudit(int id)
+    {
+        var userId = int.Parse(User.FindFirst("UserId").Value);
+        await _auditService.SubmitAuditAsync(id, userId);
+        return Ok("Audit submitted for approval");
+    }
+
+    // Admin approves audit as completed
+    [HttpPut("{id}/approve")]
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> ApproveAudit(int id)
+    {
+        await _auditService.ApproveAuditAsync(id);
+        return Ok("Audit approved and marked as completed");
     }
 }

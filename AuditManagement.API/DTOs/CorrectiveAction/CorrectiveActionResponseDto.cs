@@ -8,6 +8,10 @@ public class CorrectiveActionResponseDto
 
     public string? ActionDescription { get; set; }
 
+    public string? RootCause { get; set; }
+
+    public string? ExpectedOutcome { get; set; }
+
     public DateOnly? DueDate { get; set; }
 
     public string? Status { get; set; }

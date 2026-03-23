@@ -26,4 +26,23 @@ public class CorrectiveActionRepository : ICorrectiveActionRepository
             .Where(a => a.ObservationId == observationId && a.IsDeleted != true)
             .ToListAsync();
     }
+
+    public async Task<CorrectiveAction?> GetByIdAsync(int actionId)
+    {
+        return await _context.CorrectiveActions
+            .FirstOrDefaultAsync(a => a.ActionId == actionId && a.IsDeleted != true);
+    }
+
+    public async Task UpdateAsync(CorrectiveAction action)
+    {
+        _context.CorrectiveActions.Update(action);
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task<List<CorrectiveAction>> GetByAssignedUserIdAsync(int userId)
+    {
+        return await _context.CorrectiveActions
+            .Where(a => a.AssignedToUserId == userId && a.IsDeleted != true)
+            .ToListAsync();
+    }
 }

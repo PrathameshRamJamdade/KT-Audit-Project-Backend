@@ -35,4 +35,16 @@ public class AuditRepository : IAuditRepository
             .Where(a => a.AuditorId == auditorId && a.IsDeleted != true)
             .ToListAsync();
     }
+
+    public async Task<Audit?> GetByIdAsync(int auditId)
+    {
+        return await _context.Audits
+            .FirstOrDefaultAsync(a => a.AuditId == auditId && a.IsDeleted != true);
+    }
+
+    public async Task UpdateAsync(Audit audit)
+    {
+        _context.Audits.Update(audit);
+        await _context.SaveChangesAsync();
+    }
 }

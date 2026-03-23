@@ -23,6 +23,15 @@ public class ObservationController : ControllerBase
         return Ok("Observation added successfully");
     }
 
+    // Auditor updates observation
+    [HttpPut("{id}")]
+    [Authorize(Roles = "Auditor")]
+    public async Task<IActionResult> UpdateObservation(int id, [FromBody] UpdateObservationDto dto)
+    {
+        await _service.UpdateObservationAsync(id, dto);
+        return Ok("Observation updated successfully");
+    }
+
     // Admin + Auditor can view
     [HttpGet("{auditId}")]
     [Authorize(Roles = "Admin,Auditor")]

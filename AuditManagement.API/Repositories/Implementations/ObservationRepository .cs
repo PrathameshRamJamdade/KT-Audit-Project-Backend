@@ -21,9 +21,21 @@ public class ObservationRepository : IObservationRepository
     }
 
     public async Task<List<Observation>> GetByAuditIdAsync(int auditId)
-{
-    return await _context.Observations
-        .Where(o => o.AuditId == auditId && o.IsDeleted != true)
-        .ToListAsync();
-}
+    {
+        return await _context.Observations
+            .Where(o => o.AuditId == auditId && o.IsDeleted != true)
+            .ToListAsync();
+    }
+
+    public async Task<Observation?> GetByIdAsync(int observationId)
+    {
+        return await _context.Observations
+            .FirstOrDefaultAsync(o => o.ObservationId == observationId && o.IsDeleted != true);
+    }
+
+    public async Task UpdateAsync(Observation observation)
+    {
+        _context.Observations.Update(observation);
+        await _context.SaveChangesAsync();
+    }
 }

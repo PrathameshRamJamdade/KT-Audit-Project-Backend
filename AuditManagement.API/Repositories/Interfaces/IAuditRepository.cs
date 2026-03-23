@@ -9,4 +9,8 @@ public interface IAuditRepository
     Task<List<Audit>> GetAuditsByCreatorAsync(int userId);
 
     Task<List<Audit>> GetAuditsByAuditorAsync(int auditorId);
+
+    Task<Audit?> GetByIdAsync(int auditId);
+
+    Task UpdateAsync(Audit audit);
 }

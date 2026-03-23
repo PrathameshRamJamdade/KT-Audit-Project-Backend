@@ -105,6 +105,9 @@ namespace AuditManagement.API.Migrations
                     b.Property<DateOnly?>("DueDate")
                         .HasColumnType("date");
 
+                    b.Property<string>("ExpectedOutcome")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool?>("IsDeleted")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
@@ -112,6 +115,9 @@ namespace AuditManagement.API.Migrations
 
                     b.Property<int>("ObservationId")
                         .HasColumnType("int");
+
+                    b.Property<string>("RootCause")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Status")
                         .HasMaxLength(50)
@@ -165,6 +171,9 @@ namespace AuditManagement.API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ObservationId"));
 
+                    b.Property<string>("AreaOrLocation")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("AuditId")
                         .HasColumnType("int");
 
@@ -179,10 +188,19 @@ namespace AuditManagement.API.Migrations
                     b.Property<DateOnly?>("DueDate")
                         .HasColumnType("date");
 
+                    b.Property<string>("Finding")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool?>("IsDeleted")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
                         .HasDefaultValue(false);
+
+                    b.Property<string>("Recommendation")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RiskOrImpact")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Severity")
                         .HasMaxLength(50)

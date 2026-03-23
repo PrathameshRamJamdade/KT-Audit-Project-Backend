@@ -1,0 +1,585 @@
+2026-03-23 11:30:27 [Information] User profile is available. Using '"C:\Users\PrathameshJamdade\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-23 11:30:28 [Information] Now listening on: "http://localhost:5239"
+2026-03-23 11:30:28 [Information] Application started. Press Ctrl+C to shut down.
+2026-03-23 11:30:28 [Information] Hosting environment: "Development"
+2026-03-23 11:30:28 [Information] Content root path: "C:\Users\PrathameshJamdade\Desktop\Audit_Management_Project\Backend\AuditManagement.API"
+2026-03-23 11:30:28 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - null null
+2026-03-23 11:30:28 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 167.7694ms
+2026-03-23 11:30:28 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-23 11:30:28 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - null null
+2026-03-23 11:30:28 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - 200 16547 "application/javascript; charset=utf-8" 3.7529ms
+2026-03-23 11:30:28 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - 200 null "application/javascript;charset=utf-8" 3.9326ms
+2026-03-23 11:30:29 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - null null
+2026-03-23 11:30:29 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 342.2885ms
+2026-03-23 11:31:15 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/auth/login""" - "application/json" 76
+2026-03-23 11:31:15 [Warning] Failed to determine the https port for redirect.
+2026-03-23 11:31:15 [Information] Executing endpoint '"AuthController.Login (AuditManagement.API)"'
+2026-03-23 11:31:15 [Information] Route matched with "{action = \"Login\", controller = \"Auth\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(LoginDto)" on controller "AuthController" ("AuditManagement.API").
+2026-03-23 11:31:15 [Information] Login attempt for: "prathameshjamdade017@gmail.com"
+2026-03-23 11:31:20 [Information] Executed DbCommand ("254"ms) [Parameters=["@email='?' (Size = 150)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[UserId], [u].[CreatedAt], [u].[DepartmentId], [u].[Email], [u].[Expertise], [u].[IsDeleted], [u].[Name], [u].[Password], [u].[Role], [u].[UpdatedAt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @email AND ([u].[IsDeleted] <> CAST(1 AS bit) OR [u].[IsDeleted] IS NULL)"
+2026-03-23 11:31:21 [Information] Login successful for: "prathameshjamdade017@gmail.com"
+2026-03-23 11:31:21 [Information] Executing "OkObjectResult", writing value of type '"UserResponseDto"'.
+2026-03-23 11:31:21 [Information] Executed action "AuthController.Login (AuditManagement.API)" in 5719.6047ms
+2026-03-23 11:31:21 [Information] Executed endpoint '"AuthController.Login (AuditManagement.API)"'
+2026-03-23 11:31:21 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/auth/login""" - 200 null "application/json; charset=utf-8" 5979.6039ms
+2026-03-23 11:38:28 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/auth/login""" - "application/json" 69
+2026-03-23 11:38:28 [Information] Executing endpoint '"AuthController.Login (AuditManagement.API)"'
+2026-03-23 11:38:28 [Information] Route matched with "{action = \"Login\", controller = \"Auth\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(LoginDto)" on controller "AuthController" ("AuditManagement.API").
+2026-03-23 11:38:28 [Information] Login attempt for: "mayursalunkhe144@gmail.com"
+2026-03-23 11:38:28 [Information] Executed DbCommand ("1"ms) [Parameters=["@email='?' (Size = 150)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[UserId], [u].[CreatedAt], [u].[DepartmentId], [u].[Email], [u].[Expertise], [u].[IsDeleted], [u].[Name], [u].[Password], [u].[Role], [u].[UpdatedAt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @email AND ([u].[IsDeleted] <> CAST(1 AS bit) OR [u].[IsDeleted] IS NULL)"
+2026-03-23 11:38:28 [Information] Login successful for: "mayursalunkhe144@gmail.com"
+2026-03-23 11:38:28 [Information] Executing "OkObjectResult", writing value of type '"UserResponseDto"'.
+2026-03-23 11:38:28 [Information] Executed action "AuthController.Login (AuditManagement.API)" in 404.0086ms
+2026-03-23 11:38:28 [Information] Executed endpoint '"AuthController.Login (AuditManagement.API)"'
+2026-03-23 11:38:28 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/auth/login""" - 200 null "application/json; charset=utf-8" 410.6617ms
+2026-03-23 11:40:39 [Information] Request starting "HTTP/1.1" "PUT" "http"://"localhost:5239""""/api/users/me""" - "application/json" 99
+2026-03-23 11:40:39 [Information] Executing endpoint '"UserController.UpdateProfile (AuditManagement.API)"'
+2026-03-23 11:40:39 [Information] Route matched with "{action = \"UpdateProfile\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProfile(UpdateUserDto)" on controller "UserController" ("AuditManagement.API").
+2026-03-23 11:40:39 [Information] Updating profile for UserId: 2
+2026-03-23 11:40:40 [Information] Executed DbCommand ("20"ms) [Parameters=["@userId='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[UserId], [u].[CreatedAt], [u].[DepartmentId], [u].[Email], [u].[Expertise], [u].[IsDeleted], [u].[Name], [u].[Password], [u].[Role], [u].[UpdatedAt]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @userId AND ([u].[IsDeleted] <> CAST(1 AS bit) OR [u].[IsDeleted] IS NULL)"
+2026-03-23 11:40:40 [Information] Executed DbCommand ("13"ms) [Parameters=["@p9='?' (DbType = Int32), @p0='?' (DbType = DateTime), @p1='?' (DbType = Int32), @p2='?' (Size = 150), @p3='?' (Size = 4000), @p4='?' (DbType = Boolean), @p5='?' (Size = 100), @p6='?' (Size = 100), @p7='?' (Size = 50), @p8='?' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [CreatedAt] = @p0, [DepartmentId] = @p1, [Email] = @p2, [Expertise] = @p3, [IsDeleted] = @p4, [Name] = @p5, [Password] = @p6, [Role] = @p7, [UpdatedAt] = @p8
+OUTPUT 1
+WHERE [UserId] = @p9;"
+2026-03-23 11:40:40 [Information] Profile updated successfully for UserId: 2
+2026-03-23 11:40:40 [Information] Executing "OkObjectResult", writing value of type '"System.String"'.
+2026-03-23 11:40:40 [Information] Executed action "UserController.UpdateProfile (AuditManagement.API)" in 532.5671ms
+2026-03-23 11:40:40 [Information] Executed endpoint '"UserController.UpdateProfile (AuditManagement.API)"'
+2026-03-23 11:40:40 [Information] Request finished "HTTP/1.1" "PUT" "http"://"localhost:5239""""/api/users/me""" - 200 null "text/plain; charset=utf-8" 645.6738ms
+2026-03-23 11:40:57 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/auth/login""" - "application/json" 71
+2026-03-23 11:40:57 [Information] Executing endpoint '"AuthController.Login (AuditManagement.API)"'
+2026-03-23 11:40:57 [Information] Route matched with "{action = \"Login\", controller = \"Auth\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(LoginDto)" on controller "AuthController" ("AuditManagement.API").
+2026-03-23 11:40:57 [Information] Login attempt for: "mayursalunkhe144@gmail.com"
+2026-03-23 11:40:57 [Information] Executed DbCommand ("1"ms) [Parameters=["@email='?' (Size = 150)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[UserId], [u].[CreatedAt], [u].[DepartmentId], [u].[Email], [u].[Expertise], [u].[IsDeleted], [u].[Name], [u].[Password], [u].[Role], [u].[UpdatedAt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @email AND ([u].[IsDeleted] <> CAST(1 AS bit) OR [u].[IsDeleted] IS NULL)"
+2026-03-23 11:40:57 [Warning] Invalid login for: "mayursalunkhe144@gmail.com"
+2026-03-23 11:40:57 [Information] Executed action "AuthController.Login (AuditManagement.API)" in 4.6853ms
+2026-03-23 11:40:57 [Information] Executed endpoint '"AuthController.Login (AuditManagement.API)"'
+2026-03-23 11:40:57 [Error] An unhandled exception has occurred while executing the request.
+System.Exception: Invalid credentials
+   at AuditManagement.API.Services.Implementations.UserService.LoginAsync(LoginDto dto) in C:\Users\PrathameshJamdade\Desktop\Audit_Management_Project\Backend\AuditManagement.API\Services\Implementations\UserService .cs:line 64
+   at AuthController.Login(LoginDto dto) in C:\Users\PrathameshJamdade\Desktop\Audit_Management_Project\Backend\AuditManagement.API\Controllers\AuthController.cs:line 20
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-03-23 11:40:57 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/auth/login""" - 500 null "text/plain; charset=utf-8" 73.9448ms
+2026-03-23 11:41:16 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - null null
+2026-03-23 11:41:16 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 1.2622ms
+2026-03-23 11:41:16 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-23 11:41:16 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - null null
+2026-03-23 11:41:16 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - 200 16547 "application/javascript; charset=utf-8" 1.038ms
+2026-03-23 11:41:16 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - 200 null "application/javascript;charset=utf-8" 1.2221ms
+2026-03-23 11:41:16 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - null null
+2026-03-23 11:41:16 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/favicon-32x32.png""" - null null
+2026-03-23 11:41:16 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 15.381ms
+2026-03-23 11:41:16 [Information] Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"'
+2026-03-23 11:41:16 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/favicon-32x32.png""" - 200 628 "image/png" 17.872ms
+2026-03-23 11:42:37 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/auth/login""" - "application/json" 70
+2026-03-23 11:42:37 [Information] Executing endpoint '"AuthController.Login (AuditManagement.API)"'
+2026-03-23 11:42:37 [Information] Route matched with "{action = \"Login\", controller = \"Auth\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(LoginDto)" on controller "AuthController" ("AuditManagement.API").
+2026-03-23 11:42:37 [Information] Login attempt for: "mayursalunkhe144@gmail.com"
+2026-03-23 11:42:37 [Information] Executed DbCommand ("4"ms) [Parameters=["@email='?' (Size = 150)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[UserId], [u].[CreatedAt], [u].[DepartmentId], [u].[Email], [u].[Expertise], [u].[IsDeleted], [u].[Name], [u].[Password], [u].[Role], [u].[UpdatedAt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @email AND ([u].[IsDeleted] <> CAST(1 AS bit) OR [u].[IsDeleted] IS NULL)"
+2026-03-23 11:42:37 [Information] Login successful for: "mayursalunkhe144@gmail.com"
+2026-03-23 11:42:37 [Information] Executing "OkObjectResult", writing value of type '"UserResponseDto"'.
+2026-03-23 11:42:37 [Information] Executed action "AuthController.Login (AuditManagement.API)" in 13.2359ms
+2026-03-23 11:42:37 [Information] Executed endpoint '"AuthController.Login (AuditManagement.API)"'
+2026-03-23 11:42:37 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/auth/login""" - 200 null "application/json; charset=utf-8" 15.8596ms
+2026-03-23 12:00:58 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - null null
+2026-03-23 12:00:58 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 0.6686ms
+2026-03-23 12:00:58 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - null null
+2026-03-23 12:00:58 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - 200 null "application/javascript;charset=utf-8" 0.4471ms
+2026-03-23 12:00:58 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-23 12:00:58 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - 200 16547 "application/javascript; charset=utf-8" 0.228ms
+2026-03-23 12:00:58 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - null null
+2026-03-23 12:00:58 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 10.1137ms
+2026-03-23 12:01:01 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - null null
+2026-03-23 12:01:01 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 0.9602ms
+2026-03-23 12:01:01 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - null null
+2026-03-23 12:01:01 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - 200 null "application/javascript;charset=utf-8" 0.4507ms
+2026-03-23 12:01:01 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-23 12:01:01 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - 200 16547 "application/javascript; charset=utf-8" 0.2128ms
+2026-03-23 12:01:01 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - null null
+2026-03-23 12:01:01 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 19.0882ms
+2026-03-23 12:01:06 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - null null
+2026-03-23 12:01:06 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 0.9854ms
+2026-03-23 12:01:06 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - null null
+2026-03-23 12:01:06 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - 200 null "application/javascript;charset=utf-8" 0.401ms
+2026-03-23 12:01:06 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-23 12:01:06 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - 200 16547 "application/javascript; charset=utf-8" 0.2788ms
+2026-03-23 12:01:06 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - null null
+2026-03-23 12:01:06 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 18.7346ms
+2026-03-23 12:01:12 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - null null
+2026-03-23 12:01:12 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 0.4928ms
+2026-03-23 12:01:12 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - null null
+2026-03-23 12:01:12 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - 200 null "application/javascript;charset=utf-8" 0.4616ms
+2026-03-23 12:01:12 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-23 12:01:12 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - 200 16547 "application/javascript; charset=utf-8" 0.2335ms
+2026-03-23 12:01:12 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - null null
+2026-03-23 12:01:12 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 7.4023ms
+2026-03-23 12:01:17 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - null null
+2026-03-23 12:01:17 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 0.7779ms
+2026-03-23 12:01:17 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - null null
+2026-03-23 12:01:17 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - 200 null "application/javascript;charset=utf-8" 0.4008ms
+2026-03-23 12:01:17 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-23 12:01:17 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - 200 16547 "application/javascript; charset=utf-8" 0.2961ms
+2026-03-23 12:01:17 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - null null
+2026-03-23 12:01:17 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 13.7294ms
+2026-03-23 12:01:23 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - null null
+2026-03-23 12:01:23 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 0.4252ms
+2026-03-23 12:01:23 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - null null
+2026-03-23 12:01:23 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - 200 null "application/javascript;charset=utf-8" 0.2649ms
+2026-03-23 12:01:23 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-23 12:01:23 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - 200 16547 "application/javascript; charset=utf-8" 0.2343ms
+2026-03-23 12:01:23 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - null null
+2026-03-23 12:01:23 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 4.5864ms
+2026-03-23 12:01:26 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - null null
+2026-03-23 12:01:26 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 0.4449ms
+2026-03-23 12:01:26 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - null null
+2026-03-23 12:01:26 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - 200 null "application/javascript;charset=utf-8" 0.5812ms
+2026-03-23 12:01:26 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-23 12:01:26 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - 200 16547 "application/javascript; charset=utf-8" 0.19ms
+2026-03-23 12:01:27 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - null null
+2026-03-23 12:01:27 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 5.7268ms
+2026-03-23 12:01:32 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - null null
+2026-03-23 12:01:32 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 0.4256ms
+2026-03-23 12:01:32 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - null null
+2026-03-23 12:01:32 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - 200 null "application/javascript;charset=utf-8" 0.2776ms
+2026-03-23 12:01:32 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-23 12:01:32 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - 200 16547 "application/javascript; charset=utf-8" 0.2296ms
+2026-03-23 12:01:32 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - null null
+2026-03-23 12:01:32 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 6.686ms
+2026-03-23 12:01:36 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - null null
+2026-03-23 12:01:36 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 0.5372ms
+2026-03-23 12:01:36 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - null null
+2026-03-23 12:01:36 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - 200 null "application/javascript;charset=utf-8" 0.4024ms
+2026-03-23 12:01:36 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-23 12:01:36 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - 200 16547 "application/javascript; charset=utf-8" 0.1935ms
+2026-03-23 12:01:36 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - null null
+2026-03-23 12:01:36 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 18.8953ms
+2026-03-23 12:02:02 [Information] Application is shutting down...
+2026-03-23 12:03:12 [Information] Executed DbCommand ("19"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+2026-03-23 12:03:12 [Information] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-03-23 12:03:12 [Information] Executed DbCommand ("16"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result"
+2026-03-23 12:03:12 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;"
+2026-03-23 12:03:12 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+2026-03-23 12:03:12 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2026-03-23 12:03:12 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2026-03-23 12:03:12 [Information] Applying migration '"20260323063241_AddFormFieldsToObservationAndCorrectiveAction"'.
+2026-03-23 12:03:12 [Information] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Observations] ADD [AreaOrLocation] nvarchar(max) NULL;"
+2026-03-23 12:03:12 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Observations] ADD [Finding] nvarchar(max) NULL;"
+2026-03-23 12:03:12 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Observations] ADD [Recommendation] nvarchar(max) NULL;"
+2026-03-23 12:03:12 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [Observations] ADD [RiskOrImpact] nvarchar(max) NULL;"
+2026-03-23 12:03:12 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [CorrectiveActions] ADD [ExpectedOutcome] nvarchar(max) NULL;"
+2026-03-23 12:03:12 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [CorrectiveActions] ADD [RootCause] nvarchar(max) NULL;"
+2026-03-23 12:03:12 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20260323063241_AddFormFieldsToObservationAndCorrectiveAction', N'10.0.5');"
+2026-03-23 12:03:12 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result"
+2026-03-23 12:06:37 [Information] User profile is available. Using '"C:\Users\PrathameshJamdade\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-23 12:06:37 [Information] Now listening on: "http://localhost:5239"
+2026-03-23 12:06:37 [Information] Application started. Press Ctrl+C to shut down.
+2026-03-23 12:06:37 [Information] Hosting environment: "Development"
+2026-03-23 12:06:37 [Information] Content root path: "C:\Users\PrathameshJamdade\Desktop\Audit_Management_Project\Backend\AuditManagement.API"
+2026-03-23 12:06:37 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - null null
+2026-03-23 12:06:38 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 125.8058ms
+2026-03-23 12:06:38 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-23 12:06:38 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - null null
+2026-03-23 12:06:38 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - 200 16547 "application/javascript; charset=utf-8" 2.935ms
+2026-03-23 12:06:38 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - 200 null "application/javascript;charset=utf-8" 2.6744ms
+2026-03-23 12:06:38 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - null null
+2026-03-23 12:06:38 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 152.6281ms
+2026-03-23 12:13:55 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - null null
+2026-03-23 12:13:55 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 0.9603ms
+2026-03-23 12:13:55 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - null null
+2026-03-23 12:13:55 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - 200 null "application/javascript;charset=utf-8" 1.0373ms
+2026-03-23 12:13:55 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-23 12:13:55 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - 200 16547 "application/javascript; charset=utf-8" 1.2123ms
+2026-03-23 12:13:55 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - null null
+2026-03-23 12:13:55 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 17.4006ms
+2026-03-23 12:14:02 [Information] Application is shutting down...
+2026-03-23 12:24:28 [Information] User profile is available. Using '"C:\Users\PrathameshJamdade\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-23 12:24:28 [Information] Now listening on: "http://localhost:5239"
+2026-03-23 12:24:28 [Information] Application started. Press Ctrl+C to shut down.
+2026-03-23 12:24:28 [Information] Hosting environment: "Development"
+2026-03-23 12:24:28 [Information] Content root path: "C:\Users\PrathameshJamdade\Desktop\Audit_Management_Project\Backend\AuditManagement.API"
+2026-03-23 12:24:28 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - null null
+2026-03-23 12:24:28 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 130.333ms
+2026-03-23 12:24:28 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-23 12:24:28 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - null null
+2026-03-23 12:24:28 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - 200 16547 "application/javascript; charset=utf-8" 2.5731ms
+2026-03-23 12:24:28 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - 200 null "application/javascript;charset=utf-8" 3.0624ms
+2026-03-23 12:24:28 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - null null
+2026-03-23 12:24:29 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 152.2244ms
+2026-03-23 12:24:58 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/auth/login""" - "application/json" 76
+2026-03-23 12:24:58 [Warning] Failed to determine the https port for redirect.
+2026-03-23 12:24:58 [Information] Executing endpoint '"AuthController.Login (AuditManagement.API)"'
+2026-03-23 12:24:58 [Information] Route matched with "{action = \"Login\", controller = \"Auth\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(LoginDto)" on controller "AuthController" ("AuditManagement.API").
+2026-03-23 12:24:59 [Information] Login attempt for: "prathameshjamdade017@gmail.com"
+2026-03-23 12:25:04 [Information] Executed DbCommand ("153"ms) [Parameters=["@email='?' (Size = 150)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[UserId], [u].[CreatedAt], [u].[DepartmentId], [u].[Email], [u].[Expertise], [u].[IsDeleted], [u].[Name], [u].[Password], [u].[Role], [u].[UpdatedAt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @email AND ([u].[IsDeleted] <> CAST(1 AS bit) OR [u].[IsDeleted] IS NULL)"
+2026-03-23 12:25:04 [Information] Login successful for: "prathameshjamdade017@gmail.com"
+2026-03-23 12:25:04 [Information] Executing "OkObjectResult", writing value of type '"UserResponseDto"'.
+2026-03-23 12:25:04 [Information] Executed action "AuthController.Login (AuditManagement.API)" in 6354.6636ms
+2026-03-23 12:25:04 [Information] Executed endpoint '"AuthController.Login (AuditManagement.API)"'
+2026-03-23 12:25:05 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/auth/login""" - 200 null "application/json; charset=utf-8" 6671.0309ms
+2026-03-23 12:25:59 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/departments""" - "application/json" 30
+2026-03-23 12:25:59 [Information] Executing endpoint '"DepartmentController.CreateDepartment (AuditManagement.API)"'
+2026-03-23 12:25:59 [Information] Route matched with "{action = \"CreateDepartment\", controller = \"Department\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateDepartment(CreateDepartmentDto)" on controller "DepartmentController" ("AuditManagement.API").
+2026-03-23 12:25:59 [Information] Creating department: "Data"
+2026-03-23 12:26:00 [Information] Executed DbCommand ("17"ms) [Parameters=["@p0='?' (Size = 100), @p1='?' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Departments] ([DepartmentName], [UpdatedAt])
+OUTPUT INSERTED.[DepartmentId], INSERTED.[CreatedAt]
+VALUES (@p0, @p1);"
+2026-03-23 12:26:00 [Information] Department created successfully: "Data"
+2026-03-23 12:26:00 [Information] Executing "OkObjectResult", writing value of type '"System.String"'.
+2026-03-23 12:26:00 [Information] Executed action "DepartmentController.CreateDepartment (AuditManagement.API)" in 721.3114ms
+2026-03-23 12:26:00 [Information] Executed endpoint '"DepartmentController.CreateDepartment (AuditManagement.API)"'
+2026-03-23 12:26:00 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/departments""" - 200 null "text/plain; charset=utf-8" 986.133ms
+2026-03-23 12:27:15 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/users""" - "application/json" 132
+2026-03-23 12:27:15 [Information] Executing endpoint '"UserController.CreateUser (AuditManagement.API)"'
+2026-03-23 12:27:15 [Information] Route matched with "{action = \"CreateUser\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(CreateUserDto)" on controller "UserController" ("AuditManagement.API").
+2026-03-23 12:27:15 [Information] Creating user with email: "jamdadeprathamesh0@gmail.com"
+2026-03-23 12:27:16 [Information] Executed DbCommand ("20"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (Size = 150), @p2='?' (Size = 4000), @p3='?' (Size = 100), @p4='?' (Size = 100), @p5='?' (Size = 50), @p6='?' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([DepartmentId], [Email], [Expertise], [Name], [Password], [Role], [UpdatedAt])
+OUTPUT INSERTED.[UserId], INSERTED.[CreatedAt], INSERTED.[IsDeleted]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);"
+2026-03-23 12:27:16 [Information] User saved to DB: "jamdadeprathamesh0@gmail.com"
+2026-03-23 12:27:16 [Information] Sending email to: "jamdadeprathamesh0@gmail.com"
+2026-03-23 12:27:21 [Information] Email sent successfully to: "jamdadeprathamesh0@gmail.com"
+2026-03-23 12:27:21 [Information] Email sent to user: "jamdadeprathamesh0@gmail.com"
+2026-03-23 12:27:21 [Information] Executing "OkObjectResult", writing value of type '"System.String"'.
+2026-03-23 12:27:21 [Information] Executed action "UserController.CreateUser (AuditManagement.API)" in 5291.4145ms
+2026-03-23 12:27:21 [Information] Executed endpoint '"UserController.CreateUser (AuditManagement.API)"'
+2026-03-23 12:27:21 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/users""" - 200 null "text/plain; charset=utf-8" 5350.2654ms
+2026-03-23 12:32:08 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - null null
+2026-03-23 12:32:08 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 3.8522ms
+2026-03-23 12:32:08 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-23 12:32:08 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - 200 16547 "application/javascript; charset=utf-8" 1.011ms
+2026-03-23 12:32:08 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - null null
+2026-03-23 12:32:08 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - 200 null "application/javascript;charset=utf-8" 1.4896ms
+2026-03-23 12:32:08 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - null null
+2026-03-23 12:32:08 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 35.2588ms
+2026-03-23 12:33:08 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/auth/login""" - "application/json" 71
+2026-03-23 12:33:08 [Information] Executing endpoint '"AuthController.Login (AuditManagement.API)"'
+2026-03-23 12:33:08 [Information] Route matched with "{action = \"Login\", controller = \"Auth\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(LoginDto)" on controller "AuthController" ("AuditManagement.API").
+2026-03-23 12:33:08 [Information] Login attempt for: "jamdadeprathamesh0@gmail.com"
+2026-03-23 12:33:08 [Information] Executed DbCommand ("2"ms) [Parameters=["@email='?' (Size = 150)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[UserId], [u].[CreatedAt], [u].[DepartmentId], [u].[Email], [u].[Expertise], [u].[IsDeleted], [u].[Name], [u].[Password], [u].[Role], [u].[UpdatedAt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @email AND ([u].[IsDeleted] <> CAST(1 AS bit) OR [u].[IsDeleted] IS NULL)"
+2026-03-23 12:33:08 [Information] Login successful for: "jamdadeprathamesh0@gmail.com"
+2026-03-23 12:33:08 [Information] Executing "OkObjectResult", writing value of type '"UserResponseDto"'.
+2026-03-23 12:33:08 [Information] Executed action "AuthController.Login (AuditManagement.API)" in 422.6459ms
+2026-03-23 12:33:08 [Information] Executed endpoint '"AuthController.Login (AuditManagement.API)"'
+2026-03-23 12:33:08 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/auth/login""" - 200 null "application/json; charset=utf-8" 425.632ms
+2026-03-23 12:33:54 [Information] Request starting "HTTP/1.1" "PUT" "http"://"localhost:5239""""/api/users/me""" - "application/json" 77
+2026-03-23 12:33:54 [Information] Executing endpoint '"UserController.UpdateProfile (AuditManagement.API)"'
+2026-03-23 12:33:54 [Information] Route matched with "{action = \"UpdateProfile\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProfile(UpdateUserDto)" on controller "UserController" ("AuditManagement.API").
+2026-03-23 12:33:54 [Information] Updating profile for UserId: 3
+2026-03-23 12:33:54 [Information] Executed DbCommand ("2"ms) [Parameters=["@userId='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[UserId], [u].[CreatedAt], [u].[DepartmentId], [u].[Email], [u].[Expertise], [u].[IsDeleted], [u].[Name], [u].[Password], [u].[Role], [u].[UpdatedAt]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @userId AND ([u].[IsDeleted] <> CAST(1 AS bit) OR [u].[IsDeleted] IS NULL)"
+2026-03-23 12:33:54 [Information] Executed DbCommand ("13"ms) [Parameters=["@p9='?' (DbType = Int32), @p0='?' (DbType = DateTime), @p1='?' (DbType = Int32), @p2='?' (Size = 150), @p3='?' (Size = 4000), @p4='?' (DbType = Boolean), @p5='?' (Size = 100), @p6='?' (Size = 100), @p7='?' (Size = 50), @p8='?' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [CreatedAt] = @p0, [DepartmentId] = @p1, [Email] = @p2, [Expertise] = @p3, [IsDeleted] = @p4, [Name] = @p5, [Password] = @p6, [Role] = @p7, [UpdatedAt] = @p8
+OUTPUT 1
+WHERE [UserId] = @p9;"
+2026-03-23 12:33:54 [Information] Profile updated successfully for UserId: 3
+2026-03-23 12:33:54 [Information] Executing "OkObjectResult", writing value of type '"System.String"'.
+2026-03-23 12:33:54 [Information] Executed action "UserController.UpdateProfile (AuditManagement.API)" in 141.6549ms
+2026-03-23 12:33:54 [Information] Executed endpoint '"UserController.UpdateProfile (AuditManagement.API)"'
+2026-03-23 12:33:54 [Information] Request finished "HTTP/1.1" "PUT" "http"://"localhost:5239""""/api/users/me""" - 200 null "text/plain; charset=utf-8" 187.8181ms
+2026-03-23 12:34:03 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - null null
+2026-03-23 12:34:03 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 2.2311ms
+2026-03-23 12:34:03 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - null null
+2026-03-23 12:34:03 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - 200 null "application/javascript;charset=utf-8" 0.4846ms
+2026-03-23 12:34:03 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-23 12:34:03 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - 200 16547 "application/javascript; charset=utf-8" 0.2732ms
+2026-03-23 12:34:03 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - null null
+2026-03-23 12:34:03 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 13.9935ms
+2026-03-23 12:34:28 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/auth/login""" - "application/json" 74
+2026-03-23 12:34:28 [Information] Executing endpoint '"AuthController.Login (AuditManagement.API)"'
+2026-03-23 12:34:28 [Information] Route matched with "{action = \"Login\", controller = \"Auth\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(LoginDto)" on controller "AuthController" ("AuditManagement.API").
+2026-03-23 12:34:28 [Information] Login attempt for: "jamdadeprathamesh0@gmail.com"
+2026-03-23 12:34:28 [Information] Executed DbCommand ("3"ms) [Parameters=["@email='?' (Size = 150)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[UserId], [u].[CreatedAt], [u].[DepartmentId], [u].[Email], [u].[Expertise], [u].[IsDeleted], [u].[Name], [u].[Password], [u].[Role], [u].[UpdatedAt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @email AND ([u].[IsDeleted] <> CAST(1 AS bit) OR [u].[IsDeleted] IS NULL)"
+2026-03-23 12:34:28 [Information] Login successful for: "jamdadeprathamesh0@gmail.com"
+2026-03-23 12:34:28 [Information] Executing "OkObjectResult", writing value of type '"UserResponseDto"'.
+2026-03-23 12:34:28 [Information] Executed action "AuthController.Login (AuditManagement.API)" in 18.0672ms
+2026-03-23 12:34:28 [Information] Executed endpoint '"AuthController.Login (AuditManagement.API)"'
+2026-03-23 12:34:28 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/auth/login""" - 200 null "application/json; charset=utf-8" 21.0097ms
+2026-03-23 12:37:52 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - null null
+2026-03-23 12:37:52 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 1.1489ms
+2026-03-23 12:37:52 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - null null
+2026-03-23 12:37:52 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - 200 null "application/javascript;charset=utf-8" 0.9775ms
+2026-03-23 12:37:52 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-23 12:37:52 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - 200 16547 "application/javascript; charset=utf-8" 0.4782ms
+2026-03-23 12:37:52 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - null null
+2026-03-23 12:37:52 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 6.986ms
+2026-03-23 12:38:40 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/users""" - "application/json" 68
+2026-03-23 12:38:40 [Information] Authorization failed. "These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)"
+2026-03-23 12:38:40 [Information] AuthenticationScheme: "Bearer" was challenged.
+2026-03-23 12:38:40 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/users""" - 401 0 null 27.9569ms
+2026-03-23 12:41:41 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - null null
+2026-03-23 12:41:41 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 0.7163ms
+2026-03-23 12:41:41 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - null null
+2026-03-23 12:41:41 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - 200 null "application/javascript;charset=utf-8" 1.264ms
+2026-03-23 12:41:41 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-23 12:41:41 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - 200 16547 "application/javascript; charset=utf-8" 0.6504ms
+2026-03-23 12:41:41 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - null null
+2026-03-23 12:41:41 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 4.7432ms
+2026-03-23 12:42:00 [Information] Application is shutting down...
+2026-03-23 12:43:06 [Information] User profile is available. Using '"C:\Users\PrathameshJamdade\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-23 12:43:07 [Information] Now listening on: "http://localhost:5239"
+2026-03-23 12:43:07 [Information] Application started. Press Ctrl+C to shut down.
+2026-03-23 12:43:07 [Information] Hosting environment: "Development"
+2026-03-23 12:43:07 [Information] Content root path: "C:\Users\PrathameshJamdade\Desktop\Audit_Management_Project\Backend\AuditManagement.API"
+2026-03-23 12:43:07 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - null null
+2026-03-23 12:43:07 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 137.7894ms
+2026-03-23 12:43:07 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - null null
+2026-03-23 12:43:07 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-23 12:43:07 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - 200 null "application/javascript;charset=utf-8" 5.0876ms
+2026-03-23 12:43:07 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - 200 16547 "application/javascript; charset=utf-8" 2.8895ms
+2026-03-23 12:43:07 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - null null
+2026-03-23 12:43:07 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 157.9757ms
+2026-03-23 12:44:35 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/auth/login""" - "application/json" 76
+2026-03-23 12:44:35 [Warning] Failed to determine the https port for redirect.
+2026-03-23 12:44:35 [Information] Executing endpoint '"AuthController.Login (AuditManagement.API)"'
+2026-03-23 12:44:36 [Information] Route matched with "{action = \"Login\", controller = \"Auth\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(LoginDto)" on controller "AuthController" ("AuditManagement.API").
+2026-03-23 12:44:36 [Information] Login attempt for: "prathameshjamdade017@gmail.com"
+2026-03-23 12:44:41 [Information] Executed DbCommand ("159"ms) [Parameters=["@email='?' (Size = 150)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[UserId], [u].[CreatedAt], [u].[DepartmentId], [u].[Email], [u].[Expertise], [u].[IsDeleted], [u].[Name], [u].[Password], [u].[Role], [u].[UpdatedAt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @email AND ([u].[IsDeleted] <> CAST(1 AS bit) OR [u].[IsDeleted] IS NULL)"
+2026-03-23 12:44:41 [Information] Login successful for: "prathameshjamdade017@gmail.com"
+2026-03-23 12:44:41 [Information] Executing "OkObjectResult", writing value of type '"UserResponseDto"'.
+2026-03-23 12:44:41 [Information] Executed action "AuthController.Login (AuditManagement.API)" in 5868.7515ms
+2026-03-23 12:44:41 [Information] Executed endpoint '"AuthController.Login (AuditManagement.API)"'
+2026-03-23 12:44:41 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/auth/login""" - 200 null "application/json; charset=utf-8" 6175.3542ms
+2026-03-23 12:48:04 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/audits""" - "application/json" 175
+2026-03-23 12:48:04 [Information] Executing endpoint '"AuditController.CreateAudit (AuditManagement.API)"'
+2026-03-23 12:48:04 [Information] Route matched with "{action = \"CreateAudit\", controller = \"Audit\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateAudit(CreateAuditDto)" on controller "AuditController" ("AuditManagement.API").
+2026-03-23 12:48:04 [Information] Creating audit: "Hiring"
+2026-03-23 12:48:05 [Information] Executed DbCommand ("36"ms) [Parameters=["@p0='?' (Size = 50), @p1='?' (Size = 200), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Date), @p6='?' (DbType = Date), @p7='?' (Size = 50), @p8='?' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Audits] ([AuditCode], [AuditName], [AuditorId], [CreatedByUserId], [DepartmentId], [EndDate], [StartDate], [Status], [UpdatedAt])
+OUTPUT INSERTED.[AuditId], INSERTED.[CreatedAt], INSERTED.[IsDeleted]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);"
+2026-03-23 12:48:05 [Information] Audit created successfully: "Hiring"
+2026-03-23 12:48:05 [Information] Executing "OkObjectResult", writing value of type '"System.String"'.
+2026-03-23 12:48:05 [Information] Executed action "AuditController.CreateAudit (AuditManagement.API)" in 926.8213ms
+2026-03-23 12:48:05 [Information] Executed endpoint '"AuditController.CreateAudit (AuditManagement.API)"'
+2026-03-23 12:48:05 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/audits""" - 200 null "text/plain; charset=utf-8" 1134.8132ms
+2026-03-23 12:48:28 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/api/audits/admin""" - null null
+2026-03-23 12:48:28 [Information] Executing endpoint '"AuditController.GetAuditsForAdmin (AuditManagement.API)"'
+2026-03-23 12:48:28 [Information] Route matched with "{action = \"GetAuditsForAdmin\", controller = \"Audit\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAuditsForAdmin()" on controller "AuditController" ("AuditManagement.API").
+2026-03-23 12:48:28 [Information] Fetching audits for Admin: 1
+2026-03-23 12:48:28 [Information] Executed DbCommand ("28"ms) [Parameters=["@userId='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[AuditId], [a].[AuditCode], [a].[AuditName], [a].[AuditorId], [a].[CreatedAt], [a].[CreatedByUserId], [a].[DepartmentId], [a].[EndDate], [a].[IsDeleted], [a].[StartDate], [a].[Status], [a].[UpdatedAt]
+FROM [Audits] AS [a]
+WHERE [a].[CreatedByUserId] = @userId AND ([a].[IsDeleted] <> CAST(1 AS bit) OR [a].[IsDeleted] IS NULL)"
+2026-03-23 12:48:28 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[AuditResponseDto, AuditManagement.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-03-23 12:48:28 [Information] Executed action "AuditController.GetAuditsForAdmin (AuditManagement.API)" in 432.5102ms
+2026-03-23 12:48:28 [Information] Executed endpoint '"AuditController.GetAuditsForAdmin (AuditManagement.API)"'
+2026-03-23 12:48:28 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/api/audits/admin""" - 200 null "application/json; charset=utf-8" 477.708ms
+2026-03-23 12:48:39 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - null null
+2026-03-23 12:48:39 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 2.3219ms
+2026-03-23 12:48:39 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-23 12:48:39 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - null null
+2026-03-23 12:48:39 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - 200 16547 "application/javascript; charset=utf-8" 0.8642ms
+2026-03-23 12:48:39 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - 200 null "application/javascript;charset=utf-8" 1.474ms
+2026-03-23 12:48:39 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - null null
+2026-03-23 12:48:39 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 38.7501ms
+2026-03-23 12:49:17 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/auth/login""" - "application/json" 70
+2026-03-23 12:49:18 [Information] Executing endpoint '"AuthController.Login (AuditManagement.API)"'
+2026-03-23 12:49:18 [Information] Route matched with "{action = \"Login\", controller = \"Auth\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(LoginDto)" on controller "AuthController" ("AuditManagement.API").
+2026-03-23 12:49:18 [Information] Login attempt for: "mayursalunkhe144@gmail.com"
+2026-03-23 12:49:18 [Information] Executed DbCommand ("14"ms) [Parameters=["@email='?' (Size = 150)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[UserId], [u].[CreatedAt], [u].[DepartmentId], [u].[Email], [u].[Expertise], [u].[IsDeleted], [u].[Name], [u].[Password], [u].[Role], [u].[UpdatedAt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @email AND ([u].[IsDeleted] <> CAST(1 AS bit) OR [u].[IsDeleted] IS NULL)"
+2026-03-23 12:49:18 [Information] Login successful for: "mayursalunkhe144@gmail.com"
+2026-03-23 12:49:18 [Information] Executing "OkObjectResult", writing value of type '"UserResponseDto"'.
+2026-03-23 12:49:18 [Information] Executed action "AuthController.Login (AuditManagement.API)" in 57.9742ms
+2026-03-23 12:49:18 [Information] Executed endpoint '"AuthController.Login (AuditManagement.API)"'
+2026-03-23 12:49:18 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/auth/login""" - 200 null "application/json; charset=utf-8" 66.5471ms
+2026-03-23 12:57:03 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/observations""" - "application/json" 239
+2026-03-23 12:57:03 [Information] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString, TryReadJwtClaim tryReadJwtClaim)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-03-23 12:57:03 [Information] "Bearer" was not authenticated. Failure message: "IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string."
+2026-03-23 12:57:03 [Information] Authorization failed. "These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Auditor)"
+2026-03-23 12:57:03 [Information] AuthenticationScheme: "Bearer" was challenged.
+2026-03-23 12:57:03 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/observations""" - 401 0 null 77.2921ms
+2026-03-23 12:59:43 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/observations""" - "application/json" 239
+2026-03-23 12:59:43 [Information] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString, TryReadJwtClaim tryReadJwtClaim)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-03-23 12:59:43 [Information] "Bearer" was not authenticated. Failure message: "IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string."
+2026-03-23 12:59:43 [Information] Authorization failed. "These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Auditor)"
+2026-03-23 12:59:43 [Information] AuthenticationScheme: "Bearer" was challenged.
+2026-03-23 12:59:43 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/observations""" - 401 0 null 5.2682ms
+2026-03-23 13:01:18 [Information] Application is shutting down...
+2026-03-23 13:01:25 [Information] User profile is available. Using '"C:\Users\PrathameshJamdade\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-23 13:01:25 [Information] Now listening on: "http://localhost:5239"
+2026-03-23 13:01:25 [Information] Application started. Press Ctrl+C to shut down.
+2026-03-23 13:01:25 [Information] Hosting environment: "Development"
+2026-03-23 13:01:25 [Information] Content root path: "C:\Users\PrathameshJamdade\Desktop\Audit_Management_Project\Backend\AuditManagement.API"
+2026-03-23 13:01:25 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - null null
+2026-03-23 13:01:25 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 120.1742ms
+2026-03-23 13:01:25 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - null null
+2026-03-23 13:01:25 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-23 13:01:25 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - 200 null "application/javascript;charset=utf-8" 5.2325ms
+2026-03-23 13:01:25 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - 200 16547 "application/javascript; charset=utf-8" 6.3204ms
+2026-03-23 13:01:26 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - null null
+2026-03-23 13:01:26 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 150.0455ms
+2026-03-23 13:01:50 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/auth/login""" - "application/json" 70
+2026-03-23 13:01:50 [Warning] Failed to determine the https port for redirect.
+2026-03-23 13:01:50 [Information] Executing endpoint '"AuthController.Login (AuditManagement.API)"'
+2026-03-23 13:01:50 [Information] Route matched with "{action = \"Login\", controller = \"Auth\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(LoginDto)" on controller "AuthController" ("AuditManagement.API").
+2026-03-23 13:01:51 [Information] Login attempt for: "mayursalunkhe144@gmail.com"
+2026-03-23 13:01:55 [Information] Executed DbCommand ("119"ms) [Parameters=["@email='?' (Size = 150)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[UserId], [u].[CreatedAt], [u].[DepartmentId], [u].[Email], [u].[Expertise], [u].[IsDeleted], [u].[Name], [u].[Password], [u].[Role], [u].[UpdatedAt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @email AND ([u].[IsDeleted] <> CAST(1 AS bit) OR [u].[IsDeleted] IS NULL)"
+2026-03-23 13:01:55 [Information] Login successful for: "mayursalunkhe144@gmail.com"
+2026-03-23 13:01:55 [Information] Executing "OkObjectResult", writing value of type '"UserResponseDto"'.
+2026-03-23 13:01:55 [Information] Executed action "AuthController.Login (AuditManagement.API)" in 4870.8578ms
+2026-03-23 13:01:55 [Information] Executed endpoint '"AuthController.Login (AuditManagement.API)"'
+2026-03-23 13:01:55 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/auth/login""" - 200 null "application/json; charset=utf-8" 5118.0028ms
+2026-03-23 13:02:42 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/observations""" - "application/json" 239
+2026-03-23 13:02:42 [Information] Executing endpoint '"ObservationController.AddObservation (AuditManagement.API)"'
+2026-03-23 13:02:42 [Information] Route matched with "{action = \"AddObservation\", controller = \"Observation\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddObservation(CreateObservationDto)" on controller "ObservationController" ("AuditManagement.API").
+2026-03-23 13:02:42 [Information] Adding observation for AuditId: 1
+2026-03-23 13:02:42 [Information] Executed DbCommand ("12"ms) [Parameters=["@dto_AuditId='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Audits] AS [a]
+        WHERE [a].[AuditId] = @dto_AuditId AND ([a].[IsDeleted] <> CAST(1 AS bit) OR [a].[IsDeleted] IS NULL)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2026-03-23 13:02:43 [Information] Executed DbCommand ("12"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Date), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 50), @p8='?' (Size = 200), @p9='?' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Observations] ([AreaOrLocation], [AuditId], [Description], [DueDate], [Finding], [Recommendation], [RiskOrImpact], [Severity], [Title], [UpdatedAt])
+OUTPUT INSERTED.[ObservationId], INSERTED.[CreatedAt], INSERTED.[IsDeleted]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);"
+2026-03-23 13:02:43 [Information] Observation added successfully for AuditId: 1
+2026-03-23 13:02:43 [Information] Executing "OkObjectResult", writing value of type '"System.String"'.
+2026-03-23 13:02:43 [Information] Executed action "ObservationController.AddObservation (AuditManagement.API)" in 727.5488ms
+2026-03-23 13:02:43 [Information] Executed endpoint '"ObservationController.AddObservation (AuditManagement.API)"'
+2026-03-23 13:02:43 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/observations""" - 200 null "text/plain; charset=utf-8" 894.5945ms
+2026-03-23 13:03:37 [Information] Request starting "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/actions""" - "application/json" 199
+2026-03-23 13:03:37 [Information] Executing endpoint '"CorrectiveActionController.CreateAction (AuditManagement.API)"'
+2026-03-23 13:03:37 [Information] Route matched with "{action = \"CreateAction\", controller = \"CorrectiveAction\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateAction(CreateCorrectiveActionDto)" on controller "CorrectiveActionController" ("AuditManagement.API").
+2026-03-23 13:03:38 [Information] Creating corrective action for ObservationId: 1
+2026-03-23 13:03:38 [Information] Executed DbCommand ("23"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (DbType = Date), @p3='?' (Size = 4000), @p4='?' (DbType = Int32), @p5='?' (Size = 4000), @p6='?' (Size = 50), @p7='?' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [CorrectiveActions] ([ActionDescription], [AssignedToUserId], [DueDate], [ExpectedOutcome], [ObservationId], [RootCause], [Status], [UpdatedAt])
+OUTPUT INSERTED.[ActionId], INSERTED.[CreatedAt], INSERTED.[IsDeleted]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);"
+2026-03-23 13:03:38 [Information] Corrective action created successfully
+2026-03-23 13:03:38 [Information] Executing "OkObjectResult", writing value of type '"System.String"'.
+2026-03-23 13:03:38 [Information] Executed action "CorrectiveActionController.CreateAction (AuditManagement.API)" in 425.1111ms
+2026-03-23 13:03:38 [Information] Executed endpoint '"CorrectiveActionController.CreateAction (AuditManagement.API)"'
+2026-03-23 13:03:38 [Information] Request finished "HTTP/1.1" "POST" "http"://"localhost:5239""""/api/actions""" - 200 null "text/plain; charset=utf-8" 494.0018ms
+2026-03-23 13:14:09 [Information] Application is shutting down...
+2026-03-23 13:17:05 [Information] User profile is available. Using '"C:\Users\PrathameshJamdade\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-23 13:17:05 [Information] Now listening on: "http://localhost:5239"
+2026-03-23 13:17:05 [Information] Application started. Press Ctrl+C to shut down.
+2026-03-23 13:17:05 [Information] Hosting environment: "Development"
+2026-03-23 13:17:05 [Information] Content root path: "C:\Users\PrathameshJamdade\Desktop\Audit_Management_Project\Backend\AuditManagement.API"
+2026-03-23 13:17:06 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - null null
+2026-03-23 13:17:06 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 127.9008ms
+2026-03-23 13:17:06 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-03-23 13:17:06 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - null null
+2026-03-23 13:17:06 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/_framework/aspnetcore-browser-refresh.js""" - 200 16547 "application/javascript; charset=utf-8" 3.0789ms
+2026-03-23 13:17:06 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/index.js""" - 200 null "application/javascript;charset=utf-8" 3.2349ms
+2026-03-23 13:17:06 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - null null
+2026-03-23 13:17:06 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5239""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 208.03ms

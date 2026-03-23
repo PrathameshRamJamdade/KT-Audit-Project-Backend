@@ -2,5 +2,6 @@ public enum AuditStatus
 {
     Scheduled = 1,
     InProgress = 2,
-    Completed = 3
+    PendingApproval = 3,
+    Completed = 4
 }

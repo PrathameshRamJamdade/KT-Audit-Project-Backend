@@ -22,7 +22,7 @@ public class UserController : ControllerBase
         return Ok("User created and email sent");
     }
 
-    // Auditor and Employee can update their own profile
+    // update profile
     [HttpPut("me")]
     [Authorize(Roles = "Auditor,Employee")]
     public async Task<IActionResult> UpdateProfile([FromBody] UpdateUserDto dto)

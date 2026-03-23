@@ -7,4 +7,8 @@ public interface IAuditService
     Task<List<AuditResponseDto>> GetAuditsForAdmin(int adminId);
 
     Task<List<AuditResponseDto>> GetAuditsForAuditor(int auditorId);
+
+    Task SubmitAuditAsync(int auditId, int auditorId);
+
+    Task ApproveAuditAsync(int auditId);
 }

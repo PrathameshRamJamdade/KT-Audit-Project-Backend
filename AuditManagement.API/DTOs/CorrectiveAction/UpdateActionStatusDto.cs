@@ -1,6 +1,4 @@
-using System;
-
 public class UpdateActionStatusDto
 {
-    public string Status { get; set; }   // Open / In Progress / Closed
+    public ActionStatus Status { get; set; }
 }

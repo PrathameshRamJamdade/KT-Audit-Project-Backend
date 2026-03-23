@@ -40,6 +40,10 @@ public class ObservationService : IObservationService
             AuditId = dto.AuditId,
             Title = dto.Title,
             Description = dto.Description,
+            AreaOrLocation = dto.AreaOrLocation,
+            Finding = dto.Finding,
+            RiskOrImpact = dto.RiskOrImpact,
+            Recommendation = dto.Recommendation,
             Severity = dto.Severity.ToString(),
             DueDate = DateOnly.FromDateTime(dto.DueDate)
         };
@@ -59,7 +63,40 @@ public class ObservationService : IObservationService
             AuditId = o.AuditId,
             Title = o.Title,
             Description = o.Description,
-            Severity = o.Severity
+            AreaOrLocation = o.AreaOrLocation,
+            Finding = o.Finding,
+            RiskOrImpact = o.RiskOrImpact,
+            Recommendation = o.Recommendation,
+            Severity = o.Severity,
+            DueDate = o.DueDate
         }).ToList();
+    }
+
+    public async Task UpdateObservationAsync(int observationId, UpdateObservationDto dto)
+    {
+        _logger.LogInformation("Updating observation ID: {ObservationId}", observationId);
+
+        var observation = await _observationRepository.GetByIdAsync(observationId);
+
+        if (observation == null)
+        {
+            _logger.LogWarning("Observation not found: {ObservationId}", observationId);
+            throw new Exception("Observation not found");
+        }
+
+        if (!string.IsNullOrWhiteSpace(dto.Title)) observation.Title = dto.Title;
+        if (!string.IsNullOrWhiteSpace(dto.Description)) observation.Description = dto.Description;
+        if (!string.IsNullOrWhiteSpace(dto.AreaOrLocation)) observation.AreaOrLocation = dto.AreaOrLocation;
+        if (!string.IsNullOrWhiteSpace(dto.Finding)) observation.Finding = dto.Finding;
+        if (!string.IsNullOrWhiteSpace(dto.RiskOrImpact)) observation.RiskOrImpact = dto.RiskOrImpact;
+        if (!string.IsNullOrWhiteSpace(dto.Recommendation)) observation.Recommendation = dto.Recommendation;
+        if (dto.Severity.HasValue) observation.Severity = dto.Severity.ToString();
+        if (dto.DueDate.HasValue) observation.DueDate = DateOnly.FromDateTime(dto.DueDate.Value);
+
+        observation.UpdatedAt = DateTime.UtcNow;
+
+        await _observationRepository.UpdateAsync(observation);
+
+        _logger.LogInformation("Observation updated successfully: {ObservationId}", observationId);
     }
 }
